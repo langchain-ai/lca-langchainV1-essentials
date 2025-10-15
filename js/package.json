@@ -25,7 +25,6 @@
     "better-sqlite3": "^11.8.1",
     "dotenv": "^17.2.3",
     "langchain": "alpha",
-    "sqlite3": "^5.1.7",
     "tsx": "^4.20.6",
     "typeorm": "^0.3.27",
     "zod": "^4.1.12"
@@ -37,8 +36,7 @@
       "@langchain/textsplitters": "1.0.0-alpha.1"
     },
     "onlyBuiltDependencies": [
-      "better-sqlite3",
-      "sqlite3"
+      "better-sqlite3"
     ]
   }
 }
