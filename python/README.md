@@ -5,12 +5,12 @@
 
 ### Prerequisites
 
-- Ensure you're using Python 3.11 or later.
+- Ensure you're using Python 3.11 - 3.13.
 - This version is required for optimal compatibility with LangGraph.
 ```bash
 python3 --version
 ```
-- [uv](https://docs.astral.sh/uv/) package manager
+- [uv](https://docs.astral.sh/uv/) package manager or [pip](https://pypi.org/project/pip/)
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 # Update PATH to use the new uv version
@@ -25,12 +25,17 @@ git clone https://github.com/langchain-ai/lca-langchainV1-essentials.git
 cd ./lca-langchainV1-essentials/python
 ```
 
-2. Install the package and dependencies (this automatically creates and manages the virtual environment):
+2. Install the package and dependencies:
 ```bash
+# Using uv (this automatically creates and manages the virtual environment)
 uv sync
+
+# Using pip (first create the venv)
+python3 -m venv .venv
+pip install -r requirements.txt
 ```
 
-3. Create a `.env` file in the project root with your API keys:
+3. Copy or rename `.example.env` to create a `.env` file in the project root with your API keys:
 ```bash
 # Create .env file
 cp example.env .env
@@ -48,9 +53,9 @@ LANGSMITH_TRACING=true
 LANGSMITH_PROJECT=lc-essentials
 ```
 
-4. Run notebooks or code using uv:
+4. Run notebooks or code:
 ```bash
-# Run Jupyter notebooks directly
+# Run Jupyter notebooks directly with uv
 uv run jupyter lab
 
 # Or activate the virtual environment if preferred
@@ -64,7 +69,7 @@ jupyter lab
 # copy the .env file you created above to the studio directory
 cp .env ./studio/.
 
-#to run
+# to run
 langgraph dev
 ```
 For more information on the LangSmith Studio, see the [documentation](https://docs.langchain.com/oss/python/langchain/studio)
