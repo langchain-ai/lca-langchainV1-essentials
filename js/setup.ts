@@ -4,7 +4,7 @@ import { BaseMessage } from "langchain";
 // Issues running in the Deno kernel prevent tracing in some cases.
 Deno.env.set("LANGSMITH_TRACING", "false");
 Deno.env.set("LANGCHAIN_TRACING", "false");
-console.log("Disable LANGSMITH_TRACING in Deno kernel.")
+console.log("Disabling LANGSMITH_TRACING in Deno kernel.")
 
 /**
  * Little setup file to provide helper functions for the notebooks.
