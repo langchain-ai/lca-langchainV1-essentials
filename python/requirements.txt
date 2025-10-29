@@ -2,7 +2,7 @@ langgraph>=1.0.0
 langchain>=1.0.0
 langchain-openai>=1.0.0
 langchain-anthropic>=1.0.0
-langchain-community
+langchain-community>=0.4.0
 jupyter>=1.0.0
 langgraph-cli[inmem]>=0.4.0
 langchain-mcp-adapters
