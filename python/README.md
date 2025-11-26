@@ -58,9 +58,9 @@ LANGSMITH_ENDPOINT=https://eu.api.smith.langchain.com
 
 ```
 
-Make a virtual environment and install dependancies
+Make a virtual environment and install dependencies
 ```bash
-# Create virtual environment and install dependancies
+# Create virtual environment and install dependencies
 uv sync
 ```
 
@@ -80,8 +80,10 @@ Optional: Setup [LangSmith Studio](https://docs.langchain.com/oss/python/langcha
 ```bash
 # copy the .env file you created above to the studio directory
 cp .env ./studio/.
-
-#to run
+cd studio
+#to run with uv
+uv run langgraph dev
+#to run with virtual env
 langgraph dev
 ```
 
