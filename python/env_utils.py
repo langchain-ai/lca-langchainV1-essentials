@@ -1,6 +1,9 @@
 # env_utils.py
 import os
-from dotenv import dotenv_values
+import sys
+import shutil
+from pathlib import Path
+from dotenv import dotenv_values, load_dotenv
 
 def summarize_value(value: str) -> str:
     """Return masked form: ****last4 or boolean string."""
@@ -10,22 +13,107 @@ def summarize_value(value: str) -> str:
     return "****" + value[-4:] if len(value) > 4 else "****" + value
 
 def doublecheck_env(file_path: str):
-    """Check environment variables against a .env file and print summaries."""
+    """Check environment variables against an example env file and print summaries.
+
+    Args:
+        file_path: Path to the example.env file to check against
+    """
     if not os.path.exists(file_path):
         print(f"Did not find file {file_path}.")
         print("This is used to double check the key settings for the notebook.")
         print("This is just a check and is not required.\n")
         return
 
+    # Parse the example file to identify required keys and their example values
+    required_keys = {}
+    with open(file_path, 'r') as f:
+        lines = f.readlines()
+        is_required_section = False
+        for line in lines:
+            stripped = line.strip()
+            # Check if this is a comment line
+            if stripped.startswith('#'):
+                # Check if comment contains "required" (case-insensitive)
+                if 'required' in stripped.lower():
+                    is_required_section = True
+                else:
+                    # A different comment section starts
+                    is_required_section = False
+            # Check if this is a key=value line
+            elif '=' in stripped and not stripped.startswith('#'):
+                key = stripped.split('=')[0].strip()
+                value = stripped.split('=', 1)[1].strip()
+                if is_required_section:
+                    required_keys[key] = value
+
+    # Parse the example file to get all keys
     parsed = dotenv_values(file_path)
+    issues = []
+
     for key in parsed.keys():
         current = os.getenv(key)
         if current is not None:
             print(f"{key}={summarize_value(current)}")
+
+            # Check if this required key still has the example/placeholder value
+            if key in required_keys:
+                example_val = required_keys[key]
+                if current == example_val:
+                    issues.append(f"  ⚠️  {key} still has the example/placeholder value")
         else:
             print(f"{key}=<not set>")
+            if key in required_keys:
+                issues.append(f"  ⚠️  {key} is required but not set")
+
+    # Print any issues found
+    if issues:
+        print("\nIssues found:")
+        for issue in issues:
+            print(issue)
+    print()
 
 
+def check_venv(expected_venv_path: str = ".venv"):
+    """Check if virtual environment is properly activated.
+
+    Args:
+        expected_venv_path: Expected path to the virtual environment (default: ".venv")
+    """
+    issues = []
+
+    # Check sys.prefix - this is set to the venv path when activated
+    current_prefix = Path(sys.prefix).resolve()
+    expected_path_obj = Path(expected_venv_path).resolve()
+
+    # Check if running in a virtual environment
+    in_venv = hasattr(sys, 'real_prefix') or (hasattr(sys, 'base_prefix') and sys.base_prefix != sys.prefix)
+
+    if not in_venv:
+        issues.append("⚠️  Virtual environment is not activated")
+        issues.append("   Run: source .venv/bin/activate  (or .venv\\Scripts\\activate on Windows)")
+    else:
+        # Virtual env is activated, check if it's the expected one
+        if current_prefix != expected_path_obj:
+            issues.append(f"⚠️  Activated venv ({current_prefix}) doesn't match expected path ({expected_path_obj})")
+
+    # Check if uv is available
+    uv_available = shutil.which("uv") is not None
+
+    if not uv_available:
+        issues.append("ℹ️  'uv' command not found - this project recommends using uv for package management")
+        issues.append("   Install uv: https://docs.astral.sh/uv/")
+
+    # Print results
+    if issues:
+        print("Virtual Environment Check:")
+        for issue in issues:
+            print(issue)
+        print()
+    else:
+        print("✅ Virtual environment is properly activated")
+        if uv_available:
+            print("✅ uv is available")
+        print()
 
 
 # ========== utility to check packages and python based on pyproject.toml  =====================================
@@ -132,3 +220,10 @@ def doublecheck_pkgs(pyproject_path="pyproject.toml", verbose=False):
             print(f"- Executable: {sys.executable}")
 
     return None
+
+
+if __name__ == "__main__":
+    check_venv()
+    load_dotenv()
+    doublecheck_env("example.env")
+    doublecheck_pkgs(pyproject_path="pyproject.toml", verbose=True)

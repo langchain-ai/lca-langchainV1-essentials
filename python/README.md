@@ -1,14 +1,28 @@
-# 🔗 LangChain Essentials Python
+# 🔗 LangChain Essentials - Python
 
+## Introduction
+
+Welcome to LangChain Academy’s LangChain Essentials - Python course!
+
+---
 
 ## 🚀 Setup 
 
+### Quick Start Verification
+
+After completing the Setup section, run this command to verify your environment:
+
+```bash
+python3 env_utils.py
+```
+
 ### Prerequisites
 
-- Ensure you're using Python 3.11 - 3.13.
+- Ensure you're using Python 3.11 - 3.13. [More info](#virtual-environments-and-python)
 - [uv](https://docs.astral.sh/uv/) package manager or [pip](https://pypi.org/project/pip/)
-- OpenAI API key
+- OpenAI API key [More info](#model-providers)
 - Node.js and npx (required for MCP server in notebook 3):
+
 ```bash
 # Install Node.js (includes npx)
 # On macOS with Homebrew:
@@ -40,7 +54,8 @@ Make a copy of example.env
 cp example.env .env
 ```
 
-Insert API keys directly into .env file, OpenAI (required) and [LangSmith](#getting-started-with-langsmith) (optional)
+Edit the .env file to include the keys below. [More info](#environment-variables)
+An OpenAI key is suggested and a [LangSmith](#getting-started-with-langsmith) key is optional.
 
 ```bash
 # Add OpenAI API key
@@ -55,7 +70,6 @@ LANGSMITH_TRACING=true
 LANGSMITH_PROJECT=langgraph-py-essentials
 # If you are on the EU instance:
 LANGSMITH_ENDPOINT=https://eu.api.smith.langchain.com
-
 ```
 
 Make a virtual environment and install dependencies
@@ -64,37 +78,34 @@ Make a virtual environment and install dependencies
 uv sync
 ```
 
-Run notebooks
+## 💡 Development Environment
+
+Run Notebooks
 
 ```bash
 # Run Jupyter notebooks directly with uv
 uv run jupyter lab
 
-# Or activate the virtual environment if preferred
+# Or activate the virtual environment first, if preferred
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 jupyter lab
 ```
 
-Optional: Setup [LangSmith Studio](https://docs.langchain.com/oss/python/langchain/studio)
+Optional: Run LangSmith Studio
 
 ```bash
 # copy the .env file you created above to the studio directory
 cp .env ./studio/.
+
 cd studio
 #to run with uv
 uv run langgraph dev
+
 #to run with virtual env
 langgraph dev
 ```
 
-### Getting Started with LangSmith
-
-- Create a [LangSmith](https://smith.langchain.com/) account
-- Create a LangSmith API key
-<img width="600" alt="Screenshot 2025-10-16 at 8 28 03 AM" src="https://github.com/user-attachments/assets/e39b8364-c3e3-4c75-a287-d9d4685caad5" />
-<img width="600" alt="Screenshot 2025-10-16 at 8 29 57 AM" src="https://github.com/user-attachments/assets/2e916b2d-e3b0-4c59-a178-c5818604b8fe" />
-
-# 📚 Lessons
+## 📚 Lessons
 This repository contains nine short notebooks that serve as brief introductions to many of the most-used features in LangChain, starting with the new **Create Agent**.
 
 ---
@@ -123,3 +134,42 @@ Lessons 2–7 covered out-of-the-box features. However, `create_agent` also supp
 
 - **L8_dynamic.ipynb**: Learn how to dynamically modify the agent’s system prompt to react to changing contexts.  
 - **L9_HITL.ipynb**: Learn how to use Interrupts to enable Human-in-the-Loop interactions.
+
+## 📖 Related Resources
+
+### Virtual Environments and Python
+
+Managing your Python version is frequently best done using virtual environments.  This allows you to select a Python version for the course independent of the system Python version. There are many ways to do this. Two popular approaches use `uv` or `pyenv` to select which version to install and use in your virtual environment.
+
+For example, you can select and install the Python version when creating the virtual environment with uv. After you activate the environment, you can proceed with uv sync to install the necessary packages. For additional information, please see [uv](https://docs.astral.sh/uv/).
+
+````bash
+uv venv --python 3.11
+source .venv/bin/activate
+uv sync
+````
+
+If you are using pip instead of uv, you may prefer using pyenv to manage your Python versions.  For additional information, please see  [pyenv](https://github.com/pyenv/pyenv).
+
+### Model Providers
+
+If you don’t have an OpenAI API key, you can sign up [here](https://openai.com/index/openai-api/).
+
+This course has been created using a particular model provider.  It is possible to use another provider, but you will need to update the .env file with any required identification (API key), and some code changes will be necessary. See more about this [here](https://docs.langchain.com/oss/python/integrations/providers/all_providers).
+
+### Getting Started with LangSmith
+
+- Create a [LangSmith](https://smith.langchain.com/) account
+- Create a LangSmith API key
+
+<img width="600" alt="LangSmith Dashboard" src="https://github.com/user-attachments/assets/e39b8364-c3e3-4c75-a287-d9d4685caad5" />
+
+<img width="600" alt="LangSmith API Keys" src="https://github.com/user-attachments/assets/2e916b2d-e3b0-4c59-a178-c5818604b8fe" />
+
+- Update your .env file you created with your new LangSmith API Key.
+
+For more information on LangSmith see our docs [here](https://docs.langchain.com/oss/python/langchain/studio).
+
+### Environment Variables
+
+This course makes use of the module dotenv which reads key-value pairs from a .env file rather then relying on preset system environment variables.  This is much more convienient for the student taking mulitiple courses, as it is easy to support distinct values for keys such as LANGSMITH_PROJECT per course.
