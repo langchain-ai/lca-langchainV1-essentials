@@ -25,7 +25,7 @@ importers:
         version: 1.1.1(@langchain/core@1.1.16(openai@6.25.0(ws@8.19.0)(zod@4.3.5)))(zod-to-json-schema@3.25.1(zod@4.3.5))(zod@4.3.5)
       '@langchain/mcp-adapters':
         specifier: ^1.1.1
-        version: 1.1.1(@cfworker/json-schema@4.1.1)(@langchain/core@1.1.16(openai@6.25.0(ws@8.19.0)(zod@4.3.5)))(@langchain/langgraph@1.1.1(@langchain/core@1.1.16(openai@6.25.0(ws@8.19.0)(zod@4.3.5)))(zod-to-json-schema@3.25.1(zod@4.3.5))(zod@4.3.5))(hono@4.9.12)
+        version: 1.1.1(@cfworker/json-schema@4.1.1)(@langchain/core@1.1.16(openai@6.25.0(ws@8.19.0)(zod@4.3.5)))(@langchain/langgraph@1.1.1(@langchain/core@1.1.16(openai@6.25.0(ws@8.19.0)(zod@4.3.5)))(zod-to-json-schema@3.25.1(zod@4.3.5))(zod@4.3.5))(hono@4.12.2)
       '@langchain/openai':
         specifier: ^1.2.3
         version: 1.2.3(@langchain/core@1.1.16(openai@6.25.0(ws@8.19.0)(zod@4.3.5)))(ws@8.19.0)
@@ -1833,8 +1833,8 @@ packages:
     resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
     engines: {node: '>= 0.4'}
 
-  hono@4.9.12:
-    resolution: {integrity: sha512-SrTC0YxqPwnN7yKa8gg/giLyQ2pILCKoideIHbYbFQlWZjYt68D2A4Ae1hehO/aDQ6RmTcpqOV/O2yBtMzx/VQ==}
+  hono@4.12.2:
+    resolution: {integrity: sha512-gJnaDHXKDayjt8ue0n8Gs0A007yKXj4Xzb8+cNjZeYsSzzwKc0Lr+OZgYwVfB0pHfUs17EPoLvrOsEaJ9mj+Tg==}
     engines: {node: '>=16.9.0'}
 
   http-cache-semantics@4.2.0:
@@ -3379,17 +3379,17 @@ snapshots:
   '@gar/promisify@1.1.3':
     optional: true
 
-  '@hono/node-server@1.19.5(hono@4.9.12)':
+  '@hono/node-server@1.19.5(hono@4.12.2)':
     dependencies:
-      hono: 4.9.12
+      hono: 4.12.2
 
-  '@hono/node-server@1.19.9(hono@4.9.12)':
+  '@hono/node-server@1.19.9(hono@4.12.2)':
     dependencies:
-      hono: 4.9.12
+      hono: 4.12.2
 
-  '@hono/zod-validator@0.7.6(hono@4.9.12)(zod@4.3.5)':
+  '@hono/zod-validator@0.7.6(hono@4.12.2)(zod@4.3.5)':
     dependencies:
-      hono: 4.9.12
+      hono: 4.12.2
       zod: 4.3.5
 
   '@ibm-cloud/watsonx-ai@1.7.0':
@@ -3532,8 +3532,8 @@ snapshots:
   '@langchain/langgraph-api@1.1.11(@langchain/core@1.1.16(openai@6.25.0(ws@8.19.0)(zod@4.3.5)))(@langchain/langgraph-checkpoint@1.0.0(@langchain/core@1.1.16(openai@6.25.0(ws@8.19.0)(zod@4.3.5))))(@langchain/langgraph-sdk@1.5.5(@langchain/core@1.1.16(openai@6.25.0(ws@8.19.0)(zod@4.3.5))))(@langchain/langgraph@1.1.1(@langchain/core@1.1.16(openai@6.25.0(ws@8.19.0)(zod@4.3.5)))(zod-to-json-schema@3.25.1(zod@4.3.5))(zod@4.3.5))(openai@6.25.0(ws@8.19.0)(zod@4.3.5))(typescript@5.9.3)':
     dependencies:
       '@babel/code-frame': 7.27.1
-      '@hono/node-server': 1.19.5(hono@4.9.12)
-      '@hono/zod-validator': 0.7.6(hono@4.9.12)(zod@4.3.5)
+      '@hono/node-server': 1.19.5(hono@4.12.2)
+      '@hono/zod-validator': 0.7.6(hono@4.12.2)(zod@4.3.5)
       '@langchain/core': 1.1.16(openai@6.25.0(ws@8.19.0)(zod@4.3.5))
       '@langchain/langgraph': 1.1.1(@langchain/core@1.1.16(openai@6.25.0(ws@8.19.0)(zod@4.3.5)))(zod-to-json-schema@3.25.1(zod@4.3.5))(zod@4.3.5)
       '@langchain/langgraph-checkpoint': 1.0.0(@langchain/core@1.1.16(openai@6.25.0(ws@8.19.0)(zod@4.3.5)))
@@ -3543,7 +3543,7 @@ snapshots:
       dedent: 1.7.0
       dotenv: 16.6.1
       exit-hook: 4.0.0
-      hono: 4.9.12
+      hono: 4.12.2
       langsmith: 0.3.74(openai@6.25.0(ws@8.19.0)(zod@4.3.5))
       open: 10.2.0
       semver: 7.7.3
@@ -3634,11 +3634,11 @@ snapshots:
       - react
       - react-dom
 
-  '@langchain/mcp-adapters@1.1.1(@cfworker/json-schema@4.1.1)(@langchain/core@1.1.16(openai@6.25.0(ws@8.19.0)(zod@4.3.5)))(@langchain/langgraph@1.1.1(@langchain/core@1.1.16(openai@6.25.0(ws@8.19.0)(zod@4.3.5)))(zod-to-json-schema@3.25.1(zod@4.3.5))(zod@4.3.5))(hono@4.9.12)':
+  '@langchain/mcp-adapters@1.1.1(@cfworker/json-schema@4.1.1)(@langchain/core@1.1.16(openai@6.25.0(ws@8.19.0)(zod@4.3.5)))(@langchain/langgraph@1.1.1(@langchain/core@1.1.16(openai@6.25.0(ws@8.19.0)(zod@4.3.5)))(zod-to-json-schema@3.25.1(zod@4.3.5))(zod@4.3.5))(hono@4.12.2)':
     dependencies:
       '@langchain/core': 1.1.16(openai@6.25.0(ws@8.19.0)(zod@4.3.5))
       '@langchain/langgraph': 1.1.1(@langchain/core@1.1.16(openai@6.25.0(ws@8.19.0)(zod@4.3.5)))(zod-to-json-schema@3.25.1(zod@4.3.5))(zod@4.3.5)
-      '@modelcontextprotocol/sdk': 1.25.3(@cfworker/json-schema@4.1.1)(hono@4.9.12)(zod@4.3.5)
+      '@modelcontextprotocol/sdk': 1.25.3(@cfworker/json-schema@4.1.1)(hono@4.12.2)(zod@4.3.5)
       debug: 4.4.3
       zod: 4.3.5
     optionalDependencies:
@@ -3671,9 +3671,9 @@ snapshots:
       '@langchain/core': 1.1.16(openai@6.25.0(ws@8.19.0)(zod@4.3.5))
       js-tiktoken: 1.0.21
 
-  '@modelcontextprotocol/sdk@1.25.3(@cfworker/json-schema@4.1.1)(hono@4.9.12)(zod@4.3.5)':
+  '@modelcontextprotocol/sdk@1.25.3(@cfworker/json-schema@4.1.1)(hono@4.12.2)(zod@4.3.5)':
     dependencies:
-      '@hono/node-server': 1.19.9(hono@4.9.12)
+      '@hono/node-server': 1.19.9(hono@4.12.2)
       ajv: 8.18.0
       ajv-formats: 3.0.1(ajv@8.18.0)
       content-type: 1.0.5
@@ -3812,7 +3812,7 @@ snapshots:
 
   '@types/node-fetch@2.6.13':
     dependencies:
-      '@types/node': 24.7.2
+      '@types/node': 18.19.130
       form-data: 4.0.5
 
   '@types/node@18.19.130':
@@ -3822,6 +3822,7 @@ snapshots:
   '@types/node@24.7.2':
     dependencies:
       undici-types: 7.14.0
+    optional: true
 
   '@types/retry@0.12.0': {}
 
@@ -4627,7 +4628,7 @@ snapshots:
     dependencies:
       function-bind: 1.1.2
 
-  hono@4.9.12: {}
+  hono@4.12.2: {}
 
   http-cache-semantics@4.2.0:
     optional: true
@@ -5732,7 +5733,8 @@ snapshots:
 
   undici-types@5.26.5: {}
 
-  undici-types@7.14.0: {}
+  undici-types@7.14.0:
+    optional: true
 
   unicorn-magic@0.3.0: {}
 
