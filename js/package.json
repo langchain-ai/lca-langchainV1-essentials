@@ -41,6 +41,15 @@
     "onlyBuiltDependencies": [
       "better-sqlite3",
       "sqlite3"
-    ]
+    ],
+    "overrides": {
+      "fast-xml-parser": ">=4.5.4",
+      "tar": ">=7.5.10",
+      "hono": ">=4.12.4",
+      "@hono/node-server": ">=1.19.10",
+      "express-rate-limit": ">=8.2.2",
+      "langsmith": ">=0.4.6",
+      "@tootallnate/once": ">=3.0.1"
+    }
   }
 }
