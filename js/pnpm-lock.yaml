@@ -25,7 +25,7 @@ importers:
         version: 1.0.10(@langchain/core@1.1.16(openai@6.25.0(ws@8.19.0)(zod@4.3.5)))(openai@6.25.0(ws@8.19.0)(zod@4.3.5))(typeorm@0.3.28(better-sqlite3@12.6.2)(sqlite3@5.1.7))(ws@8.19.0)
       '@langchain/community':
         specifier: ^1.1.18
-        version: 1.1.18(@browserbasehq/sdk@2.6.0(encoding@0.1.13))(@browserbasehq/stagehand@1.14.0(@playwright/test@1.56.0)(deepmerge@4.3.1)(dotenv@17.2.3)(encoding@0.1.13)(openai@6.25.0(ws@8.19.0)(zod@4.3.5))(zod@4.3.5))(@ibm-cloud/watsonx-ai@1.7.0)(@langchain/core@1.1.16(openai@6.25.0(ws@8.19.0)(zod@4.3.5)))(better-sqlite3@12.6.2)(ibm-cloud-sdk-core@5.4.3)(jsonwebtoken@9.0.3)(openai@6.25.0(ws@8.19.0)(zod@4.3.5))(typeorm@0.3.28(better-sqlite3@12.6.2)(sqlite3@5.1.7))(ws@8.19.0)
+        version: 1.1.18(@browserbasehq/sdk@2.7.0(encoding@0.1.13))(@browserbasehq/stagehand@1.14.0(@playwright/test@1.56.0)(deepmerge@4.3.1)(dotenv@17.2.3)(encoding@0.1.13)(openai@6.25.0(ws@8.19.0)(zod@4.3.5))(zod@4.3.5))(@ibm-cloud/watsonx-ai@1.7.0)(@langchain/core@1.1.16(openai@6.25.0(ws@8.19.0)(zod@4.3.5)))(better-sqlite3@12.6.2)(ibm-cloud-sdk-core@5.4.3)(jsonwebtoken@9.0.3)(openai@6.25.0(ws@8.19.0)(zod@4.3.5))(typeorm@0.3.28(better-sqlite3@12.6.2)(sqlite3@5.1.7))(ws@8.19.0)
       '@langchain/core':
         specifier: ^1.1.16
         version: 1.1.16(openai@6.25.0(ws@8.19.0)(zod@4.3.5))
@@ -97,8 +97,8 @@ packages:
     resolution: {integrity: sha512-Q/N6JNWvIvPnLDvjlE1OUBLPQHH6l3CltCEsHIujp45zQUSSh8K+gHnaEX45yAT1nyngnINhvWtzN+Nb9D8RAQ==}
     engines: {node: '>=6.9.0'}
 
-  '@browserbasehq/sdk@2.6.0':
-    resolution: {integrity: sha512-83iXP5D7xMm8Wyn66TUaUrgoByCmAJuoMoZQI3sGg3JAiMlTfnCIMqyVBoNSaItaPIkaCnrsj6LiusmXV2X9YA==}
+  '@browserbasehq/sdk@2.7.0':
+    resolution: {integrity: sha512-1iwuj3fChplMq+S66M9tGb9ZXA4e7Vi8MjqQQ6/T6rzoAWLGfDnEAPbgTOU479o+Mi3of5/6YXk1oIHKTw0NBw==}
 
   '@browserbasehq/stagehand@1.14.0':
     resolution: {integrity: sha512-Hi/EzgMFWz+FKyepxHTrqfTPjpsuBS4zRy3e9sbMpBgLPv+9c0R+YZEvS7Bw4mTS66QtvvURRT6zgDGFotthVQ==}
@@ -1231,8 +1231,8 @@ packages:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
 
-  axios@1.13.5:
-    resolution: {integrity: sha512-cz4ur7Vb0xS4/KUN0tPWe44eqxrIu31me+fbang3ijiNscE129POzipJJA6zniq2C/Z6sJCjMimjS8Lc/GAs8Q==}
+  axios@1.13.6:
+    resolution: {integrity: sha512-ChTCHMouEe2kn713WHbQGcuYrr6fXTBiu460OTwWrWob16g1bXn4vtz07Ope7ewMozJAnEquLk5lWQWtBig9DQ==}
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -1818,8 +1818,8 @@ packages:
     resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
     engines: {node: '>= 0.4'}
 
-  hono@4.12.5:
-    resolution: {integrity: sha512-3qq+FUBtlTHhtYxbxheZgY8NIFnkkC/MR8u5TTsr7YZ3wixryQ3cCwn3iZbg8p8B88iDBBAYSfZDS75t8MN7Vg==}
+  hono@4.12.7:
+    resolution: {integrity: sha512-jq9l1DM0zVIvsm3lv9Nw9nlJnMNPOcAtsbsgiUhWcFzPE99Gvo6yRTlszSLLYacMeQ6quHD6hMfId8crVHvexw==}
     engines: {node: '>=16.9.0'}
 
   http-cache-semantics@4.2.0:
@@ -3101,7 +3101,7 @@ snapshots:
 
   '@babel/runtime@7.28.4': {}
 
-  '@browserbasehq/sdk@2.6.0(encoding@0.1.13)':
+  '@browserbasehq/sdk@2.7.0(encoding@0.1.13)':
     dependencies:
       '@types/node': 18.19.130
       '@types/node-fetch': 2.6.13
@@ -3116,7 +3116,7 @@ snapshots:
   '@browserbasehq/stagehand@1.14.0(@playwright/test@1.56.0)(deepmerge@4.3.1)(dotenv@17.2.3)(encoding@0.1.13)(openai@6.25.0(ws@8.19.0)(zod@4.3.5))(zod@4.3.5)':
     dependencies:
       '@anthropic-ai/sdk': 0.27.3(encoding@0.1.13)
-      '@browserbasehq/sdk': 2.6.0(encoding@0.1.13)
+      '@browserbasehq/sdk': 2.7.0(encoding@0.1.13)
       '@playwright/test': 1.56.0
       deepmerge: 4.3.1
       dotenv: 17.2.3
@@ -3313,13 +3313,13 @@ snapshots:
   '@gar/promisify@1.1.3':
     optional: true
 
-  '@hono/node-server@1.19.11(hono@4.12.5)':
+  '@hono/node-server@1.19.11(hono@4.12.7)':
     dependencies:
-      hono: 4.12.5
+      hono: 4.12.7
 
-  '@hono/zod-validator@0.7.6(hono@4.12.5)(zod@4.3.5)':
+  '@hono/zod-validator@0.7.6(hono@4.12.7)(zod@4.3.5)':
     dependencies:
-      hono: 4.12.5
+      hono: 4.12.7
       zod: 4.3.5
 
   '@ibm-cloud/watsonx-ai@1.7.0':
@@ -3413,7 +3413,7 @@ snapshots:
       - openai
       - ws
 
-  '@langchain/community@1.1.18(@browserbasehq/sdk@2.6.0(encoding@0.1.13))(@browserbasehq/stagehand@1.14.0(@playwright/test@1.56.0)(deepmerge@4.3.1)(dotenv@17.2.3)(encoding@0.1.13)(openai@6.25.0(ws@8.19.0)(zod@4.3.5))(zod@4.3.5))(@ibm-cloud/watsonx-ai@1.7.0)(@langchain/core@1.1.16(openai@6.25.0(ws@8.19.0)(zod@4.3.5)))(better-sqlite3@12.6.2)(ibm-cloud-sdk-core@5.4.3)(jsonwebtoken@9.0.3)(openai@6.25.0(ws@8.19.0)(zod@4.3.5))(typeorm@0.3.28(better-sqlite3@12.6.2)(sqlite3@5.1.7))(ws@8.19.0)':
+  '@langchain/community@1.1.18(@browserbasehq/sdk@2.7.0(encoding@0.1.13))(@browserbasehq/stagehand@1.14.0(@playwright/test@1.56.0)(deepmerge@4.3.1)(dotenv@17.2.3)(encoding@0.1.13)(openai@6.25.0(ws@8.19.0)(zod@4.3.5))(zod@4.3.5))(@ibm-cloud/watsonx-ai@1.7.0)(@langchain/core@1.1.16(openai@6.25.0(ws@8.19.0)(zod@4.3.5)))(better-sqlite3@12.6.2)(ibm-cloud-sdk-core@5.4.3)(jsonwebtoken@9.0.3)(openai@6.25.0(ws@8.19.0)(zod@4.3.5))(typeorm@0.3.28(better-sqlite3@12.6.2)(sqlite3@5.1.7))(ws@8.19.0)':
     dependencies:
       '@browserbasehq/stagehand': 1.14.0(@playwright/test@1.56.0)(deepmerge@4.3.1)(dotenv@17.2.3)(encoding@0.1.13)(openai@6.25.0(ws@8.19.0)(zod@4.3.5))(zod@4.3.5)
       '@ibm-cloud/watsonx-ai': 1.7.0
@@ -3429,7 +3429,7 @@ snapshots:
       uuid: 10.0.0
       zod: 4.3.5
     optionalDependencies:
-      '@browserbasehq/sdk': 2.6.0(encoding@0.1.13)
+      '@browserbasehq/sdk': 2.7.0(encoding@0.1.13)
       better-sqlite3: 12.6.2
       jsonwebtoken: 9.0.3
       typeorm: 0.3.28(better-sqlite3@12.6.2)(sqlite3@5.1.7)
@@ -3461,8 +3461,8 @@ snapshots:
   '@langchain/langgraph-api@1.1.11(@langchain/core@1.1.16(openai@6.25.0(ws@8.19.0)(zod@4.3.5)))(@langchain/langgraph-checkpoint@1.0.0(@langchain/core@1.1.16(openai@6.25.0(ws@8.19.0)(zod@4.3.5))))(@langchain/langgraph-sdk@1.5.5(@langchain/core@1.1.16(openai@6.25.0(ws@8.19.0)(zod@4.3.5))))(@langchain/langgraph@1.1.1(@langchain/core@1.1.16(openai@6.25.0(ws@8.19.0)(zod@4.3.5)))(zod-to-json-schema@3.25.1(zod@4.3.5))(zod@4.3.5))(openai@6.25.0(ws@8.19.0)(zod@4.3.5))(typescript@5.9.3)':
     dependencies:
       '@babel/code-frame': 7.27.1
-      '@hono/node-server': 1.19.11(hono@4.12.5)
-      '@hono/zod-validator': 0.7.6(hono@4.12.5)(zod@4.3.5)
+      '@hono/node-server': 1.19.11(hono@4.12.7)
+      '@hono/zod-validator': 0.7.6(hono@4.12.7)(zod@4.3.5)
       '@langchain/core': 1.1.16(openai@6.25.0(ws@8.19.0)(zod@4.3.5))
       '@langchain/langgraph': 1.1.1(@langchain/core@1.1.16(openai@6.25.0(ws@8.19.0)(zod@4.3.5)))(zod-to-json-schema@3.25.1(zod@4.3.5))(zod@4.3.5)
       '@langchain/langgraph-checkpoint': 1.0.0(@langchain/core@1.1.16(openai@6.25.0(ws@8.19.0)(zod@4.3.5)))
@@ -3472,7 +3472,7 @@ snapshots:
       dedent: 1.7.0
       dotenv: 16.6.1
       exit-hook: 4.0.0
-      hono: 4.12.5
+      hono: 4.12.7
       langsmith: 0.5.7(openai@6.25.0(ws@8.19.0)(zod@4.3.5))
       open: 10.2.0
       semver: 7.7.3
@@ -3601,7 +3601,7 @@ snapshots:
 
   '@modelcontextprotocol/sdk@1.27.1(@cfworker/json-schema@4.1.1)(zod@4.3.5)':
     dependencies:
-      '@hono/node-server': 1.19.11(hono@4.12.5)
+      '@hono/node-server': 1.19.11(hono@4.12.7)
       ajv: 8.18.0
       ajv-formats: 3.0.1(ajv@8.18.0)
       content-type: 1.0.5
@@ -3611,7 +3611,7 @@ snapshots:
       eventsource-parser: 3.0.6
       express: 5.2.1
       express-rate-limit: 8.3.0(express@5.2.1)
-      hono: 4.12.5
+      hono: 4.12.7
       jose: 6.1.3
       json-schema-typed: 8.0.2
       pkce-challenge: 5.0.0
@@ -3740,7 +3740,7 @@ snapshots:
 
   '@types/node-fetch@2.6.13':
     dependencies:
-      '@types/node': 24.7.2
+      '@types/node': 18.19.130
       form-data: 4.0.5
 
   '@types/node@18.19.130':
@@ -3750,6 +3750,7 @@ snapshots:
   '@types/node@24.7.2':
     dependencies:
       undici-types: 7.14.0
+    optional: true
 
   '@types/tough-cookie@4.0.5': {}
 
@@ -3854,7 +3855,7 @@ snapshots:
     dependencies:
       possible-typed-array-names: 1.1.0
 
-  axios@1.13.5(debug@4.4.3):
+  axios@1.13.6(debug@4.4.3):
     dependencies:
       follow-redirects: 1.15.11(debug@4.4.3)
       form-data: 4.0.5
@@ -4537,7 +4538,7 @@ snapshots:
     dependencies:
       function-bind: 1.1.2
 
-  hono@4.12.5: {}
+  hono@4.12.7: {}
 
   http-cache-semantics@4.2.0:
     optional: true
@@ -4586,7 +4587,7 @@ snapshots:
       '@types/debug': 4.1.12
       '@types/node': 18.19.130
       '@types/tough-cookie': 4.0.5
-      axios: 1.13.5(debug@4.4.3)
+      axios: 1.13.6(debug@4.4.3)
       camelcase: 6.3.0
       debug: 4.4.3
       dotenv: 16.6.1
@@ -4596,7 +4597,7 @@ snapshots:
       isstream: 0.1.2
       jsonwebtoken: 9.0.3
       mime-types: 2.1.35
-      retry-axios: 2.6.0(axios@1.13.5)
+      retry-axios: 2.6.0(axios@1.13.6(debug@4.4.3))
       tough-cookie: 4.1.4
     transitivePeerDependencies:
       - supports-color
@@ -5275,9 +5276,9 @@ snapshots:
 
   resolve-pkg-maps@1.0.0: {}
 
-  retry-axios@2.6.0(axios@1.13.5):
+  retry-axios@2.6.0(axios@1.13.6(debug@4.4.3)):
     dependencies:
-      axios: 1.13.5(debug@4.4.3)
+      axios: 1.13.6(debug@4.4.3)
 
   retry@0.12.0:
     optional: true
@@ -5608,7 +5609,8 @@ snapshots:
 
   undici-types@5.26.5: {}
 
-  undici-types@7.14.0: {}
+  undici-types@7.14.0:
+    optional: true
 
   unicorn-magic@0.3.0: {}
 
