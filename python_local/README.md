@@ -42,7 +42,7 @@ Download the course repository
 ```bash
 # Clone the repo, cd to 'python' directory
 git clone https://github.com/langchain-ai/lca-langchainV1-essentials.git
-cd ./lca-langchainV1-essentials/python
+cd ./lca-langchainV1-essentials/python_local
 ```
 
 Make a copy of example.env
