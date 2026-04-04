@@ -22,6 +22,18 @@ sudo apt-get install -y nodejs
 node --version
 npx --version
 ```
+- You can install ollama from [ollama.com](https://ollama.com). After
+  installing, make sure to pull a model (e.g., `gpt-oss`) to run locally:
+```bash
+# Pull the gpt-oss model (only need to do this once)
+ollama pull gpt-oss
+
+# Start the model locally
+ollama run gpt-oss
+
+# Check that it's running
+ollama ps
+```
 
 ### Installation
 
