@@ -2,9 +2,10 @@ import "dotenv/config";
 import { BaseMessage } from "langchain";
 
 // Issues running in the Deno kernel prevent tracing in some cases.
-Deno.env.set("LANGSMITH_TRACING", "false");
-Deno.env.set("LANGCHAIN_TRACING", "false");
-console.log("Disabling LANGSMITH_TRACING in Deno kernel.")
+// Commented out 2026-04-04 — tracing appears to work with current packages.
+// Deno.env.set("LANGSMITH_TRACING", "false");
+// Deno.env.set("LANGCHAIN_TRACING", "false");
+// console.log("Disabling LANGSMITH_TRACING in Deno kernel.")
 
 /**
  * Little setup file to provide helper functions for the notebooks.
