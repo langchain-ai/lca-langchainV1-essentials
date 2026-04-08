@@ -1,5 +1,14 @@
 # 🔗 LangChain Essentials Python
 
+## Introduction
+
+This repository is the companion to the course located [HERE](https://academy.langchain.com/courses/langchain-essentials-python).
+
+The notebooks in this python_local directory are using the Ollama gpt-oss model.  Ollama models are usually locally installed on your computer.  Please refer to the following sections to prepare your system to run the notebooks provided.
+
+**Note**: If you choose a different model from what is used in the notebook you may get unexpected results.
+
+---
 
 ## 🚀 Setup 
 
@@ -8,7 +17,7 @@
 - Ensure you're using Python 3.11 - 3.13.
 - [uv](https://docs.astral.sh/uv/) package manager or [pip](https://pypi.org/project/pip/)
 - OpenAI API key
-- Node.js and npx (required for MCP server in notebook 3):
+- Node.js and npx (required for MCP server in notebook 5):
 ```bash
 # Install Node.js (includes npx)
 # On macOS with Homebrew:
@@ -40,9 +49,9 @@ ollama ps
 Download the course repository
 
 ```bash
-# Clone the repo, cd to 'python' directory
+# Clone the repo, cd to 'python_local' directory
 git clone https://github.com/langchain-ai/lca-langchainV1-essentials.git
-cd ./lca-langchainV1-essentials/python
+cd ./lca-langchainV1-essentials/python_local
 ```
 
 Make a copy of example.env
@@ -52,7 +61,8 @@ Make a copy of example.env
 cp example.env .env
 ```
 
-Insert API keys directly into .env file, OpenAI (required) and [LangSmith](#getting-started-with-langsmith) (optional)
+**Note**: The OPENAI_API_KEY is not required if only Ollama models are used.
+Insert API keys directly into .env file, [OpenAI](https://openai.com/index/openai-api/) and [LangSmith](#getting-started-with-langsmith) (optional)
 
 ```bash
 # Add OpenAI API key
