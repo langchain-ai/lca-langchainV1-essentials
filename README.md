@@ -1,3 +1,3 @@
 # lca-langchainV1-essentials
 
-See the ./python or ./js directorys for their respective READMEs
+See the ./python, ./python_local or ./js directorys for their respective READMEs
