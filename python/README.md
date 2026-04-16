@@ -1,5 +1,14 @@
 # 🔗 LangChain Essentials Python
 
+## Introduction
+
+This repository is the companion to the course located [HERE](https://academy.langchain.com/courses/langchain-essentials-python).
+
+Please refer to the following sections to prepare your system to run the notebooks provided.
+
+**Note**: If you choose a different model from what is used in the notebook you may get unexpected results.
+
+---
 
 ## 🚀 Setup 
 
@@ -8,7 +17,7 @@
 - Ensure you're using Python 3.11 - 3.13.
 - [uv](https://docs.astral.sh/uv/) package manager or [pip](https://pypi.org/project/pip/)
 - OpenAI API key
-- Node.js and npx (required for MCP server in notebook 3):
+- Node.js and npx (required for MCP server in notebook 5):
 ```bash
 # Install Node.js (includes npx)
 # On macOS with Homebrew:

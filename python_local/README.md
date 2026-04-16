@@ -1,4 +1,4 @@
-# 🔗 LangChain Essentials Python
+# 🔗 LangChain Essentials Python - Local Model
 
 ## Introduction
 
