@@ -4,19 +4,24 @@
 
 This repository is the companion to the course located [HERE](https://academy.langchain.com/courses/langchain-essentials-python).
 
-The notebooks in this python_local directory are using the Ollama gpt-oss model.  Ollama models are usually locally installed on your computer.  Please refer to the following sections to prepare your system to run the notebooks provided.
+The notebooks in the **python_local** directory are using the Ollama gpt-oss model.  Ollama models are usually locally installed on your computer.  Please refer to the following sections to prepare your system to run the notebooks provided.
+
+Ollama makes use of your PC's GPU(s) to support local models.  Ollama supports selected GPUs from Nvidia and AMD,  but support can vary somewhat based on the OS.  Apple silicon based devices with integrated GPUs are supported - ie the M series base as well as the Max and Ultra versions.
+
+Follow this [LINK](https://docs.ollama.com/gpu) to see the GPUs that Ollama supports.
 
 **Note**: If you choose a different model from what is used in the notebook you may get unexpected results.
 
 ---
 
-## 🚀 Setup 
+## 🚀 Setup
 
 ### Prerequisites
 
-- Ensure you're using Python 3.11 - 3.13.
+- The [Chrome](https://www.google.com/chrome/) browser is recommended
+- [git](https://git-scm.com/install/) is recommended
 - [uv](https://docs.astral.sh/uv/) package manager or [pip](https://pypi.org/project/pip/)
-- OpenAI API key
+- The course requires Python >=3.11, <3.14  If you use `uv`, it will take care of this for you.
 - Node.js and npx (required for MCP server in notebook 5):
 ```bash
 # Install Node.js (includes npx)
@@ -31,6 +36,7 @@ sudo apt-get install -y nodejs
 node --version
 npx --version
 ```
+
 - You can install ollama from [ollama.com](https://ollama.com). After
   installing, make sure to pull a model (e.g., `gpt-oss`) to run locally:
 ```bash
@@ -62,6 +68,7 @@ cp example.env .env
 ```
 
 **Note**: The OPENAI_API_KEY is not required if only Ollama models are used.
+
 Insert API keys directly into .env file, [OpenAI](https://openai.com/index/openai-api/) and [LangSmith](#getting-started-with-langsmith) (optional)
 
 ```bash
@@ -74,10 +81,9 @@ OPENAI_API_KEY=your_openai_api_key_here
 # Optional API key for LangSmith tracing
 LANGSMITH_API_KEY=your_langsmith_api_key_here
 LANGSMITH_TRACING=true
-LANGSMITH_PROJECT=langgraph-py-essentials
+LANGSMITH_PROJECT=langchain-py-essentials
 # If you are on the EU instance:
 LANGSMITH_ENDPOINT=https://eu.api.smith.langchain.com
-
 ```
 
 Make a virtual environment and install dependencies

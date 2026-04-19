@@ -10,13 +10,14 @@ Please refer to the following sections to prepare your system to run the noteboo
 
 ---
 
-## 🚀 Setup 
+## 🚀 Setup
 
 ### Prerequisites
 
-- Ensure you're using Python 3.11 - 3.13.
+- The [Chrome](https://www.google.com/chrome/) browser is recommended
+- [git](https://git-scm.com/install/) is recommended
 - [uv](https://docs.astral.sh/uv/) package manager or [pip](https://pypi.org/project/pip/)
-- OpenAI API key
+- The course requires Python >=3.11, <3.14  If you use `uv`, it will take care of this for you.
 - Node.js and npx (required for MCP server in notebook 5):
 ```bash
 # Install Node.js (includes npx)
@@ -49,7 +50,7 @@ Make a copy of example.env
 cp example.env .env
 ```
 
-Insert API keys directly into .env file, OpenAI (required) and [LangSmith](#getting-started-with-langsmith) (optional)
+Insert API keys directly into .env file, [OpenAI](https://openai.com/index/openai-api/) (required) and [LangSmith](#getting-started-with-langsmith) (optional)
 
 ```bash
 # Add OpenAI API key
@@ -61,7 +62,7 @@ OPENAI_API_KEY=your_openai_api_key_here
 # Optional API key for LangSmith tracing
 LANGSMITH_API_KEY=your_langsmith_api_key_here
 LANGSMITH_TRACING=true
-LANGSMITH_PROJECT=langgraph-py-essentials
+LANGSMITH_PROJECT=langchain-py-essentials
 # If you are on the EU instance:
 LANGSMITH_ENDPOINT=https://eu.api.smith.langchain.com
 
