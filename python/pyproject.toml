@@ -28,11 +28,13 @@ dev = [
 
 # CVE-2026-32597: PyJWT <=2.11.0 accepts unknown crit header extensions.
 # CVE-2026-4539: Pygments <2.20.0 has ReDoS via GUID matching regex.
+# GHSA-rpm5-65cw-6hj4 / GHSA-x2qx-6953-8485: GitPython <3.1.47 command injection via Git options bypass.
 # Remove these constraints once the parent packages pull in fixed versions.
 [tool.uv]
 constraint-dependencies = [
     "pyjwt>=2.12.0",
     "pygments>=2.20.0",
+    "gitpython>=3.1.47",
 ]
 
 [tool.ruff]
