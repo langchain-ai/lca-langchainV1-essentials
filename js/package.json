@@ -30,7 +30,7 @@
     "langchain": "^1.2.39",
     "sqlite3": "^5.1.7",
     "tsx": "^4.21.0",
-    "typeorm": "^0.3.28",
+    "typeorm": "^0.3.29",
     "zod": "^4.3.6"
   },
   "devDependencies": {
