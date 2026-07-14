@@ -17,7 +17,7 @@
         "npm:langchain@^1.2.39",
         "npm:sqlite3@^5.1.7",
         "npm:tsx@^4.21.0",
-        "npm:typeorm@~0.3.28",
+        "npm:typeorm@~0.3.29",
         "npm:zod@^4.3.6"
       ]
     }
