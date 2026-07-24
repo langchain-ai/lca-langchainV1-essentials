@@ -20,22 +20,8 @@ Follow this [LINK](https://docs.ollama.com/gpu) to see the GPUs that Ollama supp
 
 - The [Chrome](https://www.google.com/chrome/) browser is recommended
 - [git](https://git-scm.com/install/) is recommended
-- [uv](https://docs.astral.sh/uv/) package manager
+- [uv](https://docs.astral.sh/uv/) package manager (includes `uvx`, required by notebook 5)
 - The course requires Python >=3.11, <3.14. `uv` will take care of this for you.
-- Node.js and npx (required for MCP server in notebook 5):
-```bash
-# Install Node.js (includes npx)
-# On macOS with Homebrew:
-brew install node
-
-# On Ubuntu/Debian:
-curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
-sudo apt-get install -y nodejs
-
-# Verify installation:
-node --version
-npx --version
-```
 
 - You can install ollama from [ollama.com](https://ollama.com). After
   installing, make sure to pull a model (e.g., `gpt-oss`) to run locally:

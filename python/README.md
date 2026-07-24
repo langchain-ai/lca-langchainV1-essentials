@@ -16,22 +16,8 @@ Please refer to the following sections to prepare your system to run the noteboo
 
 - The [Chrome](https://www.google.com/chrome/) browser is recommended
 - [git](https://git-scm.com/install/) is recommended
-- [uv](https://docs.astral.sh/uv/) package manager
+- [uv](https://docs.astral.sh/uv/) package manager (includes `uvx`, required by notebook 5)
 - The course requires Python >=3.11, <3.14. `uv` will take care of this for you.
-- Node.js and npx (required for MCP server in notebook 5):
-```bash
-# Install Node.js (includes npx)
-# On macOS with Homebrew:
-brew install node
-
-# On Ubuntu/Debian:
-curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
-sudo apt-get install -y nodejs
-
-# Verify installation:
-node --version
-npx --version
-```
 
 ### Installation
 
