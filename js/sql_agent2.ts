@@ -19,7 +19,7 @@ if (key === undefined) {
  * - Uses your Anthropic key from .env if needed
  */
 // const llm = new ChatOpenAI({ model: "gpt-5" });
-const llm = new ChatAnthropic({ model: "claude-sonnet-4-5-20250929" });
+const llm = new ChatAnthropic({ model: "claude-sonnet-4-6" });
 
 /**
  * Database
