@@ -4,7 +4,11 @@
 
 ### Prerequisites
 
-Ensure you have Deno installed:
+Install Node.js 22 LTS (the locked toolchain requires Node >=20.16.0), npm/npx,
+pnpm 10.28.1, and Deno. If Corepack is not bundled with your Node installation,
+install it before running `corepack enable`. The MCP lesson launches `npx`.
+
+Install the Deno Jupyter kernel:
 
 ```bash
 # Install Deno
@@ -45,15 +49,29 @@ Add your API keys to the `.env` file:
 ```env
 # Required for model usage
 ANTHROPIC_API_KEY=your_anthropic_api_key_here
+OPENAI_API_KEY=your_openai_api_key_here
 
 # Optional: For evaluation and tracing
 LANGSMITH_API_KEY=your_langsmith_api_key_here
-LANGSMITH_TRACING=true
-LANGSMITH_PROJECT=lc-essentials
+LANGSMITH_TRACING=false
+LANGSMITH_AGENT_ID=lc-essentials
+LANGSMITH_AGENT_ENVIRONMENT=local
 # If you are on the EU instance:
-LANGSMITH_ENDPOINT=https://eu.api.smith.langchain.com
+# LANGSMITH_ENDPOINT=https://eu.api.smith.langchain.com
 
 ```
+
+For optional tracing, create an agent in your LangSmith workspace and use its ID
+in `LANGSMITH_AGENT_ID`. Set `LANGSMITH_AGENT_ENVIRONMENT=local`, add your API
+key, and enable `LANGSMITH_TRACING=true`. Remove `LANGSMITH_PROJECT` and
+`LANGCHAIN_PROJECT` from your environment before switching to agent-based
+tracing, then restart the notebook kernel. Leave tracing disabled if you do not
+configure LangSmith.
+
+Lessons 4, 7, and 8 use OpenAI; the other model examples use Anthropic. Supply
+both provider keys to run all lessons. For an official OpenAI model that requires
+Responses, pass `new ChatOpenAI({ model: "gpt-5.6-luna", useResponsesApi: true })`
+from `@langchain/openai` to `createAgent`.
 
 ### Running Jupyter Notebooks
 
@@ -90,13 +108,13 @@ For more information on the LangSmith Studio, see the [documentation](https://do
 This repository contains nine short notebooks that are brief introductions to many of the most-used features in LangChain, starting with the new Create Agent.
 
 ### `L1_fast_agent.ipynb` - 🤖 Create Agent 🤖
-- In this notebook, you will build and use LangChain's `create_agent` to build an SQL agent in a few lines of code.
+- In this notebook, you will build and use LangChain's `createAgent` to build an SQL agent in a few lines of code.
 - This notebook demonstrates how quick and easy it is to build a very powerful agent.
 - You will also use LangSmith Studio, a handy visual debugger to run, host, and explore agents.
 
 
 ### `L2-7.ipynb` - 🧱 Building blocks 🧱
-In Lessons 2-7, you will learn to use some of the building blocks in LangChain. These explain and complement `create_agent`, and you will find them useful when creating your own agents. There are many lessons, but each is a quick look.
+In Lessons 2-7, you will learn to use some of the building blocks in LangChain. These explain and complement `createAgent`, and you will find them useful when creating your own agents. There are many lessons, but each is a quick look.
 
  - **L2_messages.ipynb**: Learn how messages convey information between components of the agent.
  - **L3_streaming.ipynb**: Learn to reduce user-perceived latency using streaming.
@@ -106,7 +124,7 @@ In Lessons 2-7, you will learn to use some of the building blocks in LangChain. 
  - **L7_structuredOutput.ipynb**: Learn to use your agent to produce structured output.
  - 
 ### L8-9.ipynb - 🪛 Customize Your Agent 🤖
-Lessons 2-7 covered out-of-the-box features. However, `create_agent` supports pre-built and user-created customization by adding access to the agent via Middleware. This section describes middleware and has two lessons on particular instances of its use.
+Lessons 2-7 covered out-of-the-box features. However, `createAgent` supports pre-built and user-created customization by adding access to the agent via Middleware. This section describes middleware and has two lessons on particular instances of its use.
 
 - **L8_dynamic.ipynb**: Learn to create and change the agents' system prompt on the fly to react to current situations.
 - **L9_HITL.ipynb**: Learn to use Interrupts to gain Human in the Loop interactions.
