@@ -47,12 +47,25 @@ OPENAI_API_KEY=your_openai_api_key_here
 
 # Optional API key for LangSmith tracing
 LANGSMITH_API_KEY=your_langsmith_api_key_here
-LANGSMITH_TRACING=true
-LANGSMITH_PROJECT=langchain-py-essentials
+LANGSMITH_TRACING=false
+LANGSMITH_AGENT_ID=lc-essentials
+LANGSMITH_AGENT_ENVIRONMENT=local
 # If you are on the EU instance:
-LANGSMITH_ENDPOINT=https://eu.api.smith.langchain.com
+# LANGSMITH_ENDPOINT=https://eu.api.smith.langchain.com
 
 ```
+
+For optional tracing, create an agent in your LangSmith workspace and use its ID
+in `LANGSMITH_AGENT_ID`. Set `LANGSMITH_AGENT_ENVIRONMENT=local`, add your API
+key, and enable `LANGSMITH_TRACING=true`. Remove `LANGSMITH_PROJECT` and
+`LANGCHAIN_PROJECT` from your environment before switching to agent-based
+tracing, then restart the notebook kernel. Leave tracing disabled if you do not
+configure LangSmith.
+
+For official OpenAI models that require the Responses API, initialize the model
+with `init_chat_model("openai:gpt-5.6-luna", use_responses_api=True)` and pass
+that model to `create_agent`. The default GPT-5 examples do not require changing
+providers; the Responses option does not apply to Ollama.
 
 Make a virtual environment and install dependencies
 ```bash
@@ -86,9 +99,7 @@ langgraph dev
 ### Getting Started with LangSmith
 
 - Create a [LangSmith](https://smith.langchain.com/) account
-- Create a LangSmith API key
-<img width="600" alt="Screenshot 2025-10-16 at 8 28 03 AM" src="https://github.com/user-attachments/assets/e39b8364-c3e3-4c75-a287-d9d4685caad5" />
-<img width="600" alt="Screenshot 2025-10-16 at 8 29 57 AM" src="https://github.com/user-attachments/assets/2e916b2d-e3b0-4c59-a178-c5818604b8fe" />
+- Create an agent and an API key in the same LangSmith workspace
 
 # 📚 Lessons
 This repository contains nine short notebooks that serve as brief introductions to many of the most-used features in LangChain, starting with the new **Create Agent**.

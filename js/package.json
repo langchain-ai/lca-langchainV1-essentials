@@ -6,7 +6,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "pnpx @langchain/langgraph-cli dev"
+    "dev": "langgraphjs dev"
   },
   "keywords": [
     "langchain",
@@ -20,14 +20,15 @@
     "@langchain/anthropic": "^1.3.26",
     "@langchain/classic": "^1.0.27",
     "@langchain/community": "^1.1.27",
-    "@langchain/core": "^1.1.38",
+    "@langchain/core": "^1.3.1",
     "@langchain/langgraph": "^1.2.6",
     "@langchain/mcp-adapters": "^1.1.3",
-    "@langchain/openai": "^1.4.1",
+    "@langchain/openai": "^1.8.0",
     "ansis": "^4.2.0",
     "better-sqlite3": "^12.8.0",
     "dotenv": "^17.4.0",
     "langchain": "^1.2.39",
+    "langsmith": "^0.11.4",
     "sqlite3": "^5.1.7",
     "tsx": "^4.21.0",
     "typeorm": "^0.3.29",
@@ -47,7 +48,7 @@
       "hono": ">=4.12.4",
       "@hono/node-server": ">=1.19.10",
       "express-rate-limit": ">=8.2.2",
-      "langsmith": ">=0.4.6",
+      "langsmith": "^0.11.4",
       "@tootallnate/once": ">=3.0.1",
       "path-to-regexp": ">=8.4.0",
       "brace-expansion@>=1.0.0 <2.0.0": ">=1.1.13 <2.0.0",
