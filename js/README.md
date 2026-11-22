@@ -44,10 +44,11 @@ pnpm install
 cp example.env .env
 ```
 
-Add your API keys to the `.env` file:
+For direct access, add the selected provider keys to `.env`. Alternatively, follow
+[Choose model access](../README.md#choose-model-access) for opt-in LangSmith Gateway.
 
 ```env
-# Required for model usage
+# Direct access: add the keys for the providers used in your lessons
 ANTHROPIC_API_KEY=your_anthropic_api_key_here
 OPENAI_API_KEY=your_openai_api_key_here
 
@@ -69,7 +70,7 @@ tracing, then restart the notebook kernel. Leave tracing disabled if you do not
 configure LangSmith.
 
 Lessons 4, 7, and 8 use OpenAI; the other model examples use Anthropic. Supply
-both provider keys to run all lessons. For an official OpenAI model that requires
+both provider keys to run all lessons directly, or configure Gateway for both providers. For an official OpenAI model that requires
 Responses, pass `new ChatOpenAI({ model: "gpt-5.6-luna", useResponsesApi: true })`
 from `@langchain/openai` to `createAgent`.
 
