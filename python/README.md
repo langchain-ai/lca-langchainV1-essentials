@@ -36,7 +36,9 @@ Make a copy of example.env
 cp example.env .env
 ```
 
-Insert API keys directly into .env file, [OpenAI](https://openai.com/index/openai-api/) (required) and [LangSmith](#getting-started-with-langsmith) (optional)
+For default direct access, add the key for the selected model provider to `.env`.
+Alternatively, follow [Choose model access](../README.md#choose-model-access) to use
+LangSmith Gateway without local provider keys for supported chat models.
 
 ```bash
 # Add OpenAI API key

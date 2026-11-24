@@ -55,6 +55,10 @@ cp example.env .env
 
 **Note**: The OPENAI_API_KEY is not required if only Ollama models are used.
 
+Ollama stays local and does not use LangSmith Gateway. If you change the model
+to hosted OpenAI or Anthropic chat, follow [Choose model access](../README.md#choose-model-access)
+for direct-provider or opt-in Gateway setup.
+
 Insert API keys directly into .env file, [OpenAI](https://openai.com/index/openai-api/) and [LangSmith](#getting-started-with-langsmith) (optional)
 
 ```bash
